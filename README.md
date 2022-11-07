@@ -15,3 +15,8 @@ traces.shape --> (# samples, # traces, 700)
 traces[:,i] gives ith trace in the format (# samples, 700)
 
 For our data, we only use the 'WRITE' trace, so traces.shape --> (# samples, 1, 700)
+
+To generate the quartiles, use:
+np.quantile(data, .25, axis=0)
+np.quantile(data, .75, axis=0)
+To get the first and third quartiles respectively
